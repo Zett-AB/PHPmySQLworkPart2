@@ -1,0 +1,23 @@
+
+.subtitle{
+    text-align: center;
+}
+.bord_php{
+    margin: 8px 500px 9px 500px;
+    padding: 8px;
+    border: 1px solid #0000CD;
+    border-radius: 9px;
+}
+.highlight_text{
+    color:#00CED1;
+    text-transform:uppercase;
+
+}
+.important{
+    margin: 8px 500px 9px 500px;
+    padding: 8px;
+    border: 1px solid #DC143C;
+    border-radius: 9px;
+    color: #FF4500;
+
+}
