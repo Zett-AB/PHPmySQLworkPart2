@@ -118,42 +118,11 @@
     </div>
     <div class="descr">
         <p>
-            А теперь допишем код, чтобы вывести в браузер наши изменения внесенные в таблицу movie, напоминаю наш код:
-            <ul>
-                <li>
-                    $query = $mysqli->query('SELECT * FROM movie');
-                </li>
-                <li>
-                    while( $row = mysqli_fetch_assoc($query)){
-                </li>
-                <li>
-                    echo "br>".$row['name']." ".$row['year']." Описание: ".$row['descriptions']."br>";
-                </li>
-                <li>
-                    }
-                </li>                
-            </ul> 
+            Важно помнить, что все действия с БД, в том числе и включая таблицы БД, а именно код о взоимодействии с БД, необходимо писать сразу с указанием всех действий, которые мы хотим выполнить с БД и закрывать $mysqli->close();.<br>
+            Не стоит писать код в разных места, так как это может привести к неожиданному повторному выполнению кода, что в итоге может привести к ошибкам в работе с данными БД. 
+            
         </p>
     </div>
-    <div class="code_php">
-        <?php
-            $mysqli = new mysqli('localhost', 'root', '', 'kinomoster');
-            if(mysqli_connect_errno()){
-                    printf("Соединение с БД неустановлено", mysqli_connect_error());
-                    exit();
-                }
-            
-            $mysqli->set_charset('utf8');
-            $query = $mysqli->query('SELECT * FROM movie');
-    
-            while( $row = mysqli_fetch_assoc($query)){
-                    echo "<br>".$row['name']." ".$row['year']." Описание: ".$row['descriptions']."<br>";
-                }
-            
-            $mysqli->close();    
-
-        ?>
-    </div>
-    
+        
 </body>
 </html>
